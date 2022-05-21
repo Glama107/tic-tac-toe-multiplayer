@@ -1,5 +1,5 @@
-import React from 'react';
-import Square from './Square';
+import React from "react";
+import Square from "./Square";
 
 class Board extends React.Component {
   // Create the 3 x 3 board
@@ -12,7 +12,11 @@ class Board extends React.Component {
       for (let j = 0; j < col; j += 1) {
         columns.push(this.renderSquare(cellCounter++));
       }
-      board.push(<div key={i} className="board-row">{columns}</div>);
+      board.push(
+        <div key={i} className="board-row">
+          {columns}
+        </div>
+      );
     }
 
     return board;
